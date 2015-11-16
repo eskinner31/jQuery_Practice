@@ -13,3 +13,13 @@ $blue.hover(function(){
 },function(){
   $blue.css('background-color', 'blue');
 });
+
+//testing dom creation, (must specify styles unless a style sheet is linked)
+//When creating a new element with a class that was selected earlier, jQuery does not update.
+var $myDiv = $('<div class="blue" style="width:300px; height:300px; background-color:orange">');
+
+var $body = $('body');
+$body.append($myDiv);
+
+//Test to see if I can recover the other elements with the className of Blue by resetting the variable; SURVEY SAYS I CAN!
+var $blue = $('.blue');
