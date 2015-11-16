@@ -7,3 +7,9 @@ var $blue = $('.blue');//Selecting the next element
 $blue.css('background-color', 'blue');
 $blue.css('height','300px');
 $blue.css('width','300px');
+//Toggling CSS with Event Listener 'Hover'
+$blue.hover(function(){
+  $blue.css('background-color', 'yellow');
+},function(){
+  $blue.css('background-color', 'blue');
+});
